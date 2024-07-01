@@ -20,6 +20,20 @@
 #  fk_rails_...  (owner_id => users.id)
 #
 class Photo < ApplicationRecord
-  belongs_to :owner, class_name: "Users"
+  # Direct Associations
+  belongs_to :owner, class_name: "Users", counter_cache: true
+
   has_many :comments
+  has_many :likes
+
+  # Indirect Associations
+  has_many :fans, through: :likes
+
+  # Validations
+  validates :caption, presence: true
+  validates :image, presence: true
+
+  # # Scopes
+  # scope :past_week, -> { where(created_at: 1.week.ago...) }
+  # scope :by_likes, -> { order(likes_count: :desc) }
 end
