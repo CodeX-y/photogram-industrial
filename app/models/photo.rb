@@ -33,7 +33,7 @@ class Photo < ApplicationRecord
   validates :caption, presence: true
   validates :image, presence: true
 
-  # # Scopes
-  # scope :past_week, -> { where(created_at: 1.week.ago...) }
-  # scope :by_likes, -> { order(likes_count: :desc) }
+  # Scopes
+  scope :past_week, -> { where(created_at: 1.week.ago...) }
+  scope :by_likes, -> { order(likes_count: :desc) }
 end
