@@ -21,7 +21,7 @@
 #
 class Photo < ApplicationRecord
   # Direct Associations
-  belongs_to :owner, class_name: "Users", counter_cache: true
+  belongs_to :owner, class_name: "User", counter_cache: true
 
   has_many :comments
   has_many :likes
