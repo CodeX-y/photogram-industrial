@@ -7,7 +7,6 @@
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  likes_count            :integer          default(0)
-#  likes_counter          :integer          default(0)
 #  photos_count           :integer          default(0)
 #  private                :boolean          default(TRUE)
 #  remember_created_at    :datetime
