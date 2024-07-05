@@ -1,0 +1,5 @@
+<%= render partial: "users/navbar"%>
+
+<% @users.feed.each do |post| %>
+  <%= render "photos/photo", photo: post %>
+<% end %>
