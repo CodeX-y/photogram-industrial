@@ -1,6 +1,7 @@
 <%=render partial: "users/navbar"%>
+
 <ul class="list-group list-group-flush">
   <% @user.leaders.each do |user| %>
-    <%=render partial: "users/user" user: user%>
+    <%= render "users/users", user: user %>
   <% end %>
 </ul>
